@@ -1,0 +1,51 @@
+.box1 {
+    min-height: 800px;
+    max-width: 100%;
+    border: 2px solid #333;
+    display: flex;
+    gap: 10px; /* il y a aussi le row-gap et le column-gap*/
+    flex-wrap: wrap; /* c'est no wrap par defaut*/
+    justify-content: center;
+    align-items: center; /* celui-ci controle l'alignement d'une seule ligne*/
+    /* align-content: space-evenly; */
+    align-content: center; /* celui-ci controle l'alignement de toutes les lignes ensemble*/
+}
+
+.box2 { 
+    margin-top: 200px;
+    min-height: 800px;
+    min-width: 50%;
+    max-width: 100%;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* il y a aussi le row-gap et le column-gap*/
+}
+.box-1,  .box-2{ 
+    height: 200px;
+    width: 200px;
+    background-color: #0071FF;
+    font-size: 40pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-2 {
+    min-width: 100px;
+    flex-shrink: 1; /*the default is 1 
+    flex-grow: 1; /*the default is 1*/ 
+    /* max-width: 100px; et on met le min-width pour le flex-shrink */
+}
+
+.box-2-2 {
+    /* flex-shrink: 0; */
+    /* flex-grow: 1; /*the default is 1*/ 
+    margin-right: auto;
+}
+
+@media(max-width: 575px){
+    body {
+        flex-wrap: wrap;
+    }
+}
